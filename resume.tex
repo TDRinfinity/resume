@@ -1,0 +1,145 @@
+% resume.tex
+%
+% Made by Thomas Riley
+%
+
+% Original template provided by:
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\voffset}{0.1in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{11in}
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+%-----------------------------------------------------------
+%\usepackage{fullpage}
+\usepackage{shading}
+%\textheight=9.0in
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Thomas Riley}  & mobile phone: 705-543-1767 \\
+mail@thomasriley.ca & http://thomasriley.ca \\
+Honours Electrical Engineering & ID\# 20653444
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+\resheading{Education}
+\begin{itemize}
+\item
+	\ressubheading{University of Waterloo}{Waterloo, ON}{B.A.Sc. Candidate, Electrical Engineering}{Sep. 2016 - Present}
+	\begin{itemize}
+		\resitem{Relevant courses completed: Linear Circuits, Fundamentals of Programming.}
+                \resitem{Relevent courses in progress: Digital Circuits and Systems, Engineering Design with Embedded Systems}
+	\end{itemize}
+\item
+	\ressubheading{Penetanguishene Secondary School}{Penetanguishene, ON}{Ontario Secondary School Diploma}{2012 - 2016}
+	\begin{itemize}
+                \resitem{Graduated at the top of class, \textbf{97\%} average.}
+		\resitem{Relevant courses: Technological Design, Computer Science}
+	\end{itemize}
+\end{itemize}
+
+\resheading{Relevent Experience}
+\begin{itemize}
+\item
+	\ressubheading{Midnight Sun Solar Rayce Car Team}{Waterloo, On}{Hardware Electrical Team Member}{Sept. 2016 - Present}
+	\begin{itemize}
+		\resitem{Worked as part of a team working to desing a solar race car to compete in the American and World Solar Challenges. Codesigned and tested a motor precharge circuit to limit the inrush current to the motor controller. Codesigned model of battery module to be implemented in battery enclosure.}
+	\end{itemize}
+\end{itemize}
+
+\resheading{Employment Experience}
+\begin{itemize}
+\item
+  \ressubheading{Foodland}{Penetanguishene, On}{Deli Clerk}{July 2016 - Sept. 2016}
+      \begin{itemize}
+          \resitem{Communicated effectively with customers taking custom deli orders.}
+          \resitem{Demostrated responsibility through running the department alone after minimal training.}
+      \end{itemize}
+\item
+  \ressubheading{McDonalds Canada}{Midland, On}{Crew Member}{May 2014 - Nov. 2015}
+      \begin{itemize}
+          \resitem{Reduced average order time from 130 secodns to 56 secodns by corrdinating huniour crew effectively.}
+          \resitem{Implemented and maintained a posted reference sheet of the storage times of various fresh ingredients, improving both the safety and quality of our food as well as increasing the efficiency of food preparation.}
+      \end{itemize}
+\item
+  \ressubheading{Little Caesars Co.}{Midland, On}{Team Member}{Sept. 2013 - May 2014}  
+      \begin{itemize}
+          \resitem{Utilized multitasking in a fast paced environment by both taking and preparing food orders.}
+          \resitem{Demonstrated a high degree of responsibility through running the restaurant with minimal supervision.}
+      \end{itemize}
+\end{itemize}
+
+\resheading{Awards}
+	\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+          President's Scholarship of Distinction & 2016 \\
+          The Govenor General's Academic Medal & 2016 \\
+          Prince Philip Scholarship & 2016 \\
+          Principal's Award & 2016 \\
+          National Biology Scholar & 2016 \\
+          Frey Science Award & 2016 \\
+          Euclid Contest Distinction & 2016 \\
+          Character Recognition Award & 2016 \\
+          
+\end{tabular*}
+
+\resheading{Skills}
+
+\begin{description}
+\item[Languages:]
+C++, \LaTeX, Java (including Android), Bash, HTML/CSS/Javascript, some Python, Ruby, Liquid
+\item[Operating Systems:]
+Linux (Debian, Fedora, Arch Linux) , Windows, Mac OSX 
+\item[Applications:]
+emacs, \LaTeX, MS Office, MS Excel some Altium Designer
+\item[Lab Skils:]
+Digital/Analog Scopes, Function Generators, Soldering
+\item[Miscellaneous:]
+strong written communication skills, excellent troubleshooting and debugging skills, exceptional problem solving skills, good teams skills
+\end{description}
+
+\resheading{Interests}
+
+\begin{description}
+\item[Sports:] Pool (8-ball, 9-ball), fastpitch softball
+\item[Electronics:] Currently learning about RF techniques in order to build a simple AM radio. Also working towards my Amateur Radio Licence.  
+\item[Computers:] Currently using a Fedora build on my main computer as well as Arch Linux. Enjoy learning more about bash scripting and the linux workflow.
+\item[Reading:] I am currently reading a text on middle-eastern history since the dawn of Islam, as well as various electronics texts.
+\end{description}
+
+\end{document}
