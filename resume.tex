@@ -10,6 +10,10 @@
 % This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
 \documentclass[letterpaper,10pt]{article}
+\usepackage[default,osfigures,scale=0.95]{opensans}
+%\usepackage[sfdefault]{roboto}
+\usepackage[T1]{fontenc}
+%\renewcommand{\familydefault}{\sfdefault}
 
 %-----------------------------------------------------------
 %Margin setup
@@ -41,12 +45,12 @@
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
 \newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
 \newcommand{\ressubheading}[4]{
-\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{#3} & \textit{#4} \\
-\end{tabular*}\vspace{-6pt}}
+    \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+    		\textbf{#1} & #2 \\
+    		\textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-6pt}}
 \newcommand{\resshortsubheading}[2]{
-    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
         \textbf{#1} & #2 \\
     \end{tabular*}\vspace{-6pt}}
 %-----------------------------------------------------------
@@ -55,10 +59,10 @@
 \begin{document}
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Thomas Riley}  & mobile phone: 705-543-1767 \\
-\href{mailto:mail@thomasriley.ca}{mail@thomasriley.ca} & \url{http://thomasriley.ca} \\
-\url{https://www.linkedin.com/in/thomasdavidriley} & \url{https://github.com/TDRinfinity} \\
-Honours Electrical Engineering & ID\# 20653444
+\textbf{\Large Thomas Riley}  & \href{mailto:mail@thomasriley.ca}{mail@thomasriley.ca} \\
+1B Honours Electrical Engineering & \url{http://thomasriley.ca} \\
+Student ID\# 20653444 & \url{https://github.com/TDRinfinity} \\
+mobile phone: 705-543-1767 & \url{https://www.linkedin.com/in/thomasdavidriley}
 \end{tabular*}
 \\
 
@@ -83,23 +87,23 @@ Honours Electrical Engineering & ID\# 20653444
 
 
 \resheading{Experience}
-\begin{itemize}
+%\begin{itemize}
     \begin{samepage}
-        \item
+%        \item
         \ressubheading{Midnight Sun Solar Rayce Car Team}{Waterloo, On}{Hardware Electrical Team Member}{Sept. 2016 - Present}
         \begin{itemize}
-            \resitem{Worked as part of a team working to design a solar race car to compete in the American and World Solar Challenges.}
+            \resitem{Worked as part of a team to design a solar race car to compete in the American and World Solar Challenges.}
             \resitem{Co-designed a motor precharge circuit to limit the inrush current to the motor controller, as well as a model of battery module to be implemented in battery enclosure.}
             \resitem{Tested motor precharge circuit using lab test equipment including oscilloscope, digital multimeter, and power supply.}
+            \resitem{Gained introduction to circuit design with Altium Designer CAD software.}
         \end{itemize}
     \end{samepage}
     \begin{samepage}
-        \item
+%        \item
         \ressubheading{Part-time Food Service Positions}{Penetanguishene and Midland, On}{Crew at Little Caesars, McDonalds Canada, and Foodland}{Sept. 2013 - Sept. 2016}
         \begin{itemize}
             \resitem{Worked for 8 months, 18 months, and one summer respectively at Little Caesars, McDonalds, and Foodland.}
             \resitem{Demonstrated responsibility through running the kitchen alone or with more more junior crew members often at these three establishments.}
-            \resitem{Utilized great time management skills through the balance of school work and a part time job.} 
         \end{itemize}
     \end{samepage}
     %%%  Part time Experience %%%    
@@ -121,13 +125,31 @@ Honours Electrical Engineering & ID\# 20653444
     %        \resitem{Utilized multitasking in a fast paced environment by both taking and preparing food orders.}
     %        \resitem{Demonstrated a high degree of responsibility through running the restaurant with minimal supervision.}
     %    \end{itemize}
-\end{itemize}
+%\end{itemize}
 
 
 \resheading{Projects}
-\begin{itemize}
+%\begin{itemize}
 \begin{samepage}
-    \item
+    %    \item
+    \resshortsubheading{LED Array Counter}{July 2015}
+    \begin{itemize}
+        \resitem{Created LED array and wrote accompanying C++ Arduino code in order display counter on LEDs.}
+        \resitem{Soldered LEDs in array connecting cathodes in rows, and anodes in columns to order to make individual LEDs indexable (by driving cathode HIGH and anode LOW). The leads were then connected to a pin header in order to make them controllable by Arduino.}
+        \resitem{Used clocked refresh to take advantage of persistence of vision in order to allow multiple LEDs to appear to be on at once. }
+    \end{itemize}   
+\end{samepage}
+\begin{samepage}
+%    \item 
+    \resshortsubheading{Wireless Power Transfer Circuit}{January 2016}
+    \begin{itemize}
+        \resitem{Designed an circuit on perf. board that powers LED wirelessly. }
+        \resitem{Used 555 timer as an asynchronous multivibrator to switch N-channel MOSFET, creating pulse signal in primary coil. }
+        \resitem{Used inductive coupling in order to transfer power to secondary coil attached to LED}
+    \end{itemize}
+\end{samepage}
+\begin{samepage}
+    %    \item
     \resshortsubheading{Custom Mechanical Keyboard}{March 2016}
     \begin{itemize}
         \resitem{Created 'Ergodox' ergonomic mechanical keyboard from open-source design.}
@@ -136,54 +158,44 @@ Honours Electrical Engineering & ID\# 20653444
 \end{samepage}
 %\pagebreak
 \begin{samepage}
-    \item 
-    \resshortsubheading{Wireless Power Transfer Circuit}{January 2016}
+    %   \item
+    \ressubheading{Triangle Solver Android App}{March 2016}{(Academic)}{}
     \begin{itemize}
-        \resitem{Designed an circuit on perf. board that powers LED wirelessly. }
-        \resitem{Used 555 timer as an asynchronous multivibrator to switch N-channel MOSFET, creating pulse signal in primary coil. }
-        \resitem{Used inductive coupling in order to transfer power to secondary coil attached to LED}
+        \resitem{Created app which when given three pieces of information about a triangle (side lengths or angles), will calculate all other sides and angles.}
+        \resitem{Allowed user to enter information in either degrees or radians.}
+        \resitem{Prevented user from entering erroneous input, and prompts user if they enter parameters which cannot form a valid triangle.}
+    \end{itemize} 
+\end{samepage}
+\begin{samepage}
+    %    \item
+    \ressubheading{Dots and Boxes Game Android App}{April 2016}{(Academic)}{}
+    \begin{itemize}
+        \resitem{Created simple two player game in android studio based on the classic paper and pencil game.}
+        \resitem{Used object oriented programming to simplify design.}
+        \resitem{Wrote well commented code in order to ensure code readability.}
     \end{itemize}
 \end{samepage}
-\pagebreak
 \begin{samepage}
-    \item
-    \resshortsubheading{LED Array Counter}{July 2015}
-        \begin{itemize}
-            \resitem{Created LED array and wrote accompanying Arduino code in order display counter on LEDs.}
-            \resitem{Soldered LEDs in array connecting cathodes in rows, and anodes in columns to order to make individual LEDs indexable (by driving cathode HIGH and anode LOW). The leads were then connected to a pin header in order to make them controllable by Arduino.}
-            \resitem{Used clocked refresh to take advantage of persistence of vision in order to allow multiple LEDs to appear to be on at once. }
-        \end{itemize}   
+    %    \item
+    \resshortsubheading{Created Personal Website}{December 2016}
+    \begin{itemize}
+        \resitem{Created website using Jekyll software to generate static site from custom written HTML/CSS that could be hosted on GitHub pages.}
+        \resitem{Used liquid template language to organize Jekyll site, and used markdown to write articles for site.}
+        \resitem{Incorporated features such as pagination and Facebook comments into blog posts.}
+    \end{itemize}
 \end{samepage}
-\begin{samepage}
-    \item
-    \ressubheading{Dots and Boxes Game Android App}{April 2016}{(Academic)}{}
-        \begin{itemize}
-            \resitem{Created simple two player game in android studio based on the classic paper and pencil game.}
-            \resitem{Used object oriented programming to simplify design.}
-            \resitem{Wrote well commented code in order to ensure code readability.}
-        \end{itemize}
-\end{samepage}
-\begin{samepage}
-   \item
-   \ressubheading{Triangle Solver Android App}{March 2016}{(Academic)}{}
-       \begin{itemize}
-           \resitem{Created app which when given three pieces of information about a triangle (side lengths or angles), will calculate all other sides and angles.}
-           \resitem{Allowed user to enter information in either degrees or radians.}
-           \resitem{Prevented user from entering erroneous input, and prompts user if they enter parameters which cannot form a valid triangle.}
-       \end{itemize} 
-\end{samepage}
-\end{itemize}
+%\end{itemize}
 
 
 \resheading{Education}
-\begin{itemize}
-\item
+%\begin{itemize}
+%\item
 	\ressubheading{University of Waterloo}{Waterloo, ON}{Bachelor of Applied Science Candidate, Electrical Engineering}{Sep. 2016 - Present}
 	\begin{itemize}
         \resitem{Cumulative GPA: \textbf{3.98/4}} 
         \resitem{Academic Class Representative (Winter 2017)}
-        \resitem{Relevant courses completed: Linear Circuits (99\%), Fundamentals of Programming (100\%).}
-        \resitem{Relevant courses in progress: Digital Circuits and Systems, Engineering Design with Embedded Systems}
+        \resitem{Relevant courses completed: Linear Circuits (99\%), Programming in C++ (100\%).}
+        \resitem{Relevant courses in progress: Digital Circuits and Systems (VHDL), Engineering Design with Embedded Systems (Android)}
 	\end{itemize}
 %\item
 %	\ressubheading{Penetanguishene Secondary School}{Penetanguishene, ON}{Ontario Secondary School Diploma}{2012 - 2016}
@@ -191,29 +203,30 @@ Honours Electrical Engineering & ID\# 20653444
 %        \resitem{Graduated at the top of class, \textbf{97\%} average.}
 %		\resitem{Relevant courses: Technological Design, Computer Science}
 %	\end{itemize}
-\end{itemize}
+%\end{itemize}
 
 
-\resheading{Awards}
-	\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-          President's Scholarship of Distinction & 2016 \\
-          The Governor General's Academic Medal & 2016 \\
-          Prince Philip Scholarship & 2016 \\
-          Principal's Award & 2016 \\
-          National Biology Scholar & 2016 \\
-          Frey Science Award & 2016 \\
-          Euclid Contest Distinction & 2016 \\
-          Character Recognition Award & 2016 \\
-          
-\end{tabular*}
+%\resheading{Awards}
+%	\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+%          President's Scholarship of Distinction & 2016 \\
+%          The Governor General's Academic Medal & 2016 \\
+%          Prince Philip Scholarship & 2016 \\
+%          Principal's Award & 2016 \\
+%          National Biology Scholar & 2016 \\
+%          Frey Science Award & 2016 \\
+%          Euclid Contest Distinction & 2016 \\
+%          Character Recognition Award & 2016 \\
+%          
+%\end{tabular*}
 
 
 \resheading{Interests}
 \begin{description}
-\item[Sports:] Pool (8-ball, 9-ball), fast-pitch softball. I am also a big Blue Jays fan.
-\item[Electronics:] Currently learning about RF techniques in order to build a simple AM radio. Also working towards my Amateur Radio Licence.  
-\item[Computers:] Currently using a Fedora build on my main computer as well as Arch Linux. Enjoy learning more about bash scripting and the Linux work flow.
-\item[Reading:] I am currently reading a text on middle-eastern history since the dawn of Islam, as well as various electronics texts.
+\item[Sports:] Pool (8-ball, 9-ball), played house-league fast-pitch softball for nine years. I am also a big Blue Jays fan.
+\item[Electronics:] Currently learning about RF techniques in order to build a simple AM radio. \item Working towards my Amateur Radio Licence.  
+\item[Computers:] Currently using a Fedora build on my main computer as well as Arch Linux. 
+\item Enjoy learning more about bash scripting and the Linux work flow.
+\item[Reading:] Interest in History, as well as various electronics texts such as \textit{The Art of Electronics} and \textit{The ARRL Handbook for Radio Communications}.
 \end{description}
 
 \end{document}
