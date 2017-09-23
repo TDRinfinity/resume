@@ -33,8 +33,10 @@
 %-----------------------------------------------------------\
 \usepackage{hyperref}
 %\usepackage{fullpage}
-\usepackage{shading}
+%\usepackage{shading}
 %\textheight=9.0in
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.80}
 \pagestyle{empty}
 \raggedbottom
 \raggedright
@@ -43,11 +45,11 @@
 %-----------------------------------------------------------
 %Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
 \newcommand{\ressubheading}[4]{
     \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
     		\textbf{#1} & #2 \\
-    		\textit{#3} & \textit{#4} \\
+    		 #3 		& \textit{#4} \\
     \end{tabular*}\vspace{-6pt}}
 \newcommand{\resshortsubheading}[2]{
     \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
@@ -60,9 +62,9 @@
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
 \textbf{\Large Thomas Riley}  & \href{mailto:mail@thomasriley.ca}{mail@thomasriley.ca} \\
-1B Honours Electrical Engineering & \url{http://thomasriley.ca} \\
+2A Honours Electrical Engineering & \url{http://thomasriley.ca} \\
 Student ID\# 20653444 & \url{https://github.com/TDRinfinity} \\
-mobile phone: 705-543-1767 & \url{https://www.linkedin.com/in/thomasdavidriley}
+mobile phone: (705) 209-9318 & \url{https://www.linkedin.com/in/thomasdavidriley}
 \end{tabular*}
 \\
 
@@ -74,23 +76,34 @@ mobile phone: 705-543-1767 & \url{https://www.linkedin.com/in/thomasdavidriley}
 \resheading{Skills}
 \begin{description}
     \item[Languages:]
-    C++, \LaTeX, Java (including Android), Bash, HTML/CSS/Javascript, some Python, Ruby, Liquid
+    C/C++, Java (including Android), \LaTeX, Bash, VHDL, MATLAB, Python
     \item[Operating Systems:]
-    Linux (Debian, Fedora, Arch Linux) , Windows 
+    Linux (Debian, Fedora, Arch Linux) , Windows, macOS
     \item[Applications:]
-    emacs, \LaTeX, MS Word, MS Excel, Adobe Suite, some Altium Designer
+    Altium EDA, Upverter, Kiel $\mu$Vision, AutoCAD, emacs, Android Studio, MS Word, MS Excel
     \item[Lab Skills:]
-    Digital/Analog Oscilloscopes, Function Generators, Multimeters, Power Supplies, Soldering
-    \item[Miscellaneous:]
-    Strong written communication skills, excellent troubleshooting and debugging skills, exceptional problem solving skills, good teams skills
+    Electronics troubleshooting and verification using D.S.O., D.M.M. etc; SMD Soldering
+%    \item[Miscellaneous:]
+%    Strong written communication skills, excellent troubleshooting and debugging skills, exceptional problem solving skills, good teams skills
 \end{description}
 
 
 \resheading{Experience}
 %\begin{itemize}
+	\begin{samepage}
+		%        \item
+		\ressubheading{Electronics Designer / Firmware Developer}{\textbf{GymNext}}{Penetanguishene, On}{May 2017 - Aug. 2017}
+		\begin{itemize}
+			\resitem{Designed a new edition of the FlexTimer, a BLE controlled gym timer. Migrated current project from RFduino based chip to Rigado chip set.}
+			\resitem{Wrote firmware in C using the Kiel $\mu$Vision 5 IDE for the Nordic nRF52 (ARM Cortex-M4F based SoC).}
+			\resitem{Used lab equipment such as a oscilloscope, function generator, and multimeter to design a circuit to implement a digitally controlled variable volume buzzer at a low cost.}
+			\resitem{Used Altium CircuitMaker to design the schematic and PCB layout for both the control and display board.}
+			\resitem{Hand assembled boards using air-gun reflow and a reflow oven to solder SMD parts. Tested and verified boards using oscilloscope, digital multimeter and frequency counter. }
+		\end{itemize}
+	\end{samepage}
     \begin{samepage}
 %        \item
-        \ressubheading{Midnight Sun Solar Rayce Car Team}{Waterloo, On}{Hardware Electrical Team Member}{Sept. 2016 - Present}
+        \ressubheading{Hardware Electrical Team Member}{\textbf{Midnight Sun Solar Rayce Car Team}}{Waterloo, On}{Sept. 2016 - Feb. 2017}
         \begin{itemize}
             \resitem{Worked as part of a team to design a solar race car to compete in the American and World Solar Challenges.}
             \resitem{Co-designed a motor precharge circuit to limit the inrush current to the motor controller, as well as a model of battery module to be implemented in battery enclosure.}
@@ -98,14 +111,14 @@ mobile phone: 705-543-1767 & \url{https://www.linkedin.com/in/thomasdavidriley}
             \resitem{Gained introduction to circuit design with Altium Designer CAD software.}
         \end{itemize}
     \end{samepage}
-    \begin{samepage}
-%        \item
-        \ressubheading{Part-time Food Service Positions}{Penetanguishene and Midland, On}{Crew at Little Caesars, McDonalds Canada, and Foodland}{Sept. 2013 - Sept. 2016}
-        \begin{itemize}
-            \resitem{Worked for 8 months, 18 months, and one summer respectively at Little Caesars, McDonalds, and Foodland.}
-            \resitem{Demonstrated responsibility through running the kitchen alone or with more more junior crew members often at these three establishments.}
-        \end{itemize}
-    \end{samepage}
+%    \begin{samepage}
+%%        \item
+%        \ressubheading{Part-time Food Service Positions}{Penetanguishene and Midland, On}{Crew at Little Caesars, McDonalds Canada, and Foodland}{Sept. 2013 - Sept. 2016}
+%        \begin{itemize}
+%            \resitem{Worked for 8 months, 18 months, and one summer respectively at Little Caesars, McDonalds, and Foodland.}
+%            \resitem{Demonstrated responsibility through running the kitchen alone or with more more junior crew members often at these three establishments.}
+%        \end{itemize}
+%    \end{samepage}
     %%%  Part time Experience %%%    
     %    \item
     %    \ressubheading{Foodland}{Penetanguishene, On}{Deli Clerk}{July 2016 - Sept. 2016}
@@ -148,6 +161,7 @@ mobile phone: 705-543-1767 & \url{https://www.linkedin.com/in/thomasdavidriley}
         \resitem{Used inductive coupling in order to transfer power to secondary coil attached to LED}
     \end{itemize}
 \end{samepage}
+\pagebreak
 \begin{samepage}
     %    \item
     \resshortsubheading{Custom Mechanical Keyboard}{March 2016}
@@ -192,10 +206,11 @@ mobile phone: 705-543-1767 & \url{https://www.linkedin.com/in/thomasdavidriley}
 %\item
 	\ressubheading{University of Waterloo}{Waterloo, ON}{Bachelor of Applied Science Candidate, Electrical Engineering}{Sep. 2016 - Present}
 	\begin{itemize}
-        \resitem{Cumulative GPA: \textbf{3.98/4}} 
-        \resitem{Academic Class Representative (Winter 2017)}
-        \resitem{Relevant courses completed: Linear Circuits (99\%), Programming in C++ (100\%).}
-        \resitem{Relevant courses in progress: Digital Circuits and Systems (VHDL), Engineering Design with Embedded Systems (Android)}
+        \resitem{Cumulative GPA: \textbf{3.97/4}}
+        \resitem{Engineering Ambassador (Fall 2017)} 
+        \resitem{Waterloo Rocketry Team (Fall 2017)}
+        \resitem{Academic Class Representative (Winter 2017-Present)}
+        \resitem{Volunteered at Fall Open House (Fall 2016) as Engineering representative, and Engineering Orientation (Fall 2017) as a leader.}
 	\end{itemize}
 %\item
 %	\ressubheading{Penetanguishene Secondary School}{Penetanguishene, ON}{Ontario Secondary School Diploma}{2012 - 2016}
@@ -206,27 +221,29 @@ mobile phone: 705-543-1767 & \url{https://www.linkedin.com/in/thomasdavidriley}
 %\end{itemize}
 
 
-%\resheading{Awards}
-%	\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-%          President's Scholarship of Distinction & 2016 \\
-%          The Governor General's Academic Medal & 2016 \\
-%          Prince Philip Scholarship & 2016 \\
-%          Principal's Award & 2016 \\
-%          National Biology Scholar & 2016 \\
-%          Frey Science Award & 2016 \\
-%          Euclid Contest Distinction & 2016 \\
-%          Character Recognition Award & 2016 \\
-%          
-%\end{tabular*}
+\resheading{Awards}
+	\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		Rank 1 in Electrical Engineering 1B & Winter 2017 \\
+		Rank 7 in Electrical Engineering 1A & Fall 2016 \\
+          President's Scholarship of Distinction & 2016 \\
+          The Governor General's Academic Medal & 2016 \\
+          Prince Philip Scholarship & 2016 \\
+          Principal's Award & 2016 \\
+          National Biology Scholar & 2016 \\
+          Frey Science Award & 2016 \\
+          Euclid Contest Distinction & 2016 \\
+          Character Recognition Award & 2016 \\
+          
+\end{tabular*}
 
 
-\resheading{Interests}
-\begin{description}
-\item[Sports:] Pool (8-ball, 9-ball), played house-league fast-pitch softball for nine years. I am also a big Blue Jays fan.
-\item[Electronics:] Currently learning about RF techniques in order to build a simple AM radio. \item Working towards my Amateur Radio Licence.  
-\item[Computers:] Currently using a Fedora build on my main computer as well as Arch Linux. 
-\item Enjoy learning more about bash scripting and the Linux work flow.
-\item[Reading:] Interest in History, as well as various electronics texts such as \textit{The Art of Electronics} and \textit{The ARRL Handbook for Radio Communications}.
-\end{description}
+%\resheading{Interests}
+%\begin{description}
+%\item[Sports:] Billiard sports, fast-pitch softball, Blue Jays fan.
+%\item[Electronics:] Currently learning about RF techniques in order to build a simple AM radio. \item Working towards my Amateur Radio Licence.  
+%\item[Computers:] Currently using a Fedora build on my main computer as well as Arch Linux. 
+%\item Enjoy learning more about bash scripting and the Linux work flow.
+%\item[Reading:] Interest in History, as well as various electronics texts such as \textit{The Art of Electronics} and \textit{The ARRL Handbook for Radio Communications}.
+%\end{description}
 
 \end{document}
